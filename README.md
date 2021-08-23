@@ -27,3 +27,7 @@ tar -zxvf target_log.tar.gz -C /tmp/target_log
 
 nuclei -t /main -target /tmp/target_log -no-interactsh -no-update-templates -nc
 ```
+
+---
+
+> create by ffffffff0x
