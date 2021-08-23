@@ -1,0 +1,212 @@
+id: useragent
+
+info:
+  name: useragent
+  author: ffffffff0x
+  severity: info
+  description: useragent 检测
+  tags: log
+
+file:
+  - extensions:
+      - all
+
+    matchers:
+      - type: word
+        name: curl
+        words:
+          - "curl/6."
+          - "curl/7."
+        condition: or
+
+      - type: word
+        name: cf-worker
+        words:
+          - "cf-worker"
+
+      - type: word
+        name: Go-client
+        words:
+          - "Go-http-client/"
+
+      - type: word
+        name: Scanbot
+        words:
+          - "Scanbot"
+
+      - type: word
+        name: webcrusier
+        words:
+          - "webcrusier"
+
+      - type: word
+        name: gobuster
+        words:
+          - "gobuster"
+
+      - type: word
+        name: Rsas
+        words:
+          - "Rsas"
+
+      - type: word
+        name: xsstest
+        words:
+          - "xsstest"
+
+      - type: word
+        name: n-stealth
+        words:
+          - "n-stealth"
+
+      - type: word
+        name: AlScanner
+        words:
+          - "AlScanner"
+
+      - type: word
+        name: CrowdStrike
+        words:
+          - "CrowdStrike"
+
+      - type: word
+        name: nessus
+        words:
+          - "nessus"
+
+      - type: word
+        name: Havij
+        words:
+          - "Havij"
+
+      - type: word
+        name: dbappsecurity
+        words:
+          - "dbappsecurity"
+
+      - type: word
+        name: Sucuri
+        words:
+          - "Sucuri"
+
+      - type: word
+        name: nmap-nse
+        words:
+          - "nmap-nse"
+
+      - type: word
+        name: sglmap
+        words:
+          - "sglmap"
+
+      - type: word
+        name: HP ASC
+        words:
+          - "HP ASC"
+
+      - type: word
+        name: Hydra
+        words:
+          - "Hydra"
+
+      - type: word
+        name: nmap scripting
+        words:
+          - "nmap scripting"
+
+      - type: word
+        name: WhatWeb
+        words:
+          - "WhatWeb"
+
+      - type: word
+        name: nmap nse
+        words:
+          - "nmap nse"
+
+      - type: word
+        name: w3af.org
+        words:
+          - "w3af.org"
+
+      - type: word
+        name: Mirai/Mozi 变体
+        words:
+          - " \"Hello, World\""
+          - " \"Hello, Momentum\""
+        condition: or
+
+      - type: word
+        name: 置空扫描
+        words:
+          - "\"-\" \"-\""
+
+      - type: word
+        name: Fuzz Faster U Fool
+        words:
+          - "Fuzz Faster U Fool"
+
+      - type: word
+        name: SqIninja
+        words:
+          - "SqIninja"
+
+      - type: word
+        name: Arachni
+        words:
+          - "Arachni"
+
+      - type: word
+        name: WPScan
+        words:
+          - "WPScan"
+
+      - type: word
+        name: Wfuzz
+        words:
+          - "Wfuzz"
+
+      - type: word
+        name: ScanAlert
+        words:
+          - "ScanAlert"
+
+      - type: word
+        name: Pangolin
+        words:
+          - "Pangolin"
+
+      - type: word
+        name: AppScan
+        words:
+          - "AppScan"
+
+      - type: word
+        name: OpenVAS
+        words:
+          - "OpenVAS"
+
+      - type: word
+        name: Webinspect
+        words:
+          - "Webinspect"
+
+      - type: word
+        name: WebVulnscan
+        words:
+          - "WebVulnscan"
+
+      - type: word
+        name: antSword
+        words:
+          - "antSword"
+
+      - type: word
+        name: sqlmap
+        words:
+          - "sqlmap"
+
+      - type: word
+        name: acunetix_wvs_security_test
+        words:
+          - "acunetix_wvs_security_test"

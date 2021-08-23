@@ -1,0 +1,22 @@
+id: wordpress-xmlrpc
+
+info:
+  name: wordpress-xmlrpc
+  author: ffffffff0x
+  severity: info
+  description: wordpress-xmlrpc 攻击痕迹检测
+  tags: log
+
+file:
+  - extensions:
+      - all
+
+    matchers:
+      - type: word
+        words:
+          - "/xmlrpc.php"
+
+    extractors:
+      - type: regex
+        regex:
+          - "/xmlrpc.php"

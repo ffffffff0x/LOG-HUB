@@ -1,0 +1,59 @@
+id: phpMyAdmin
+
+info:
+  name: phpMyAdmin
+  author: ffffffff0x
+  severity: info
+  description: phpMyAdmin 攻击痕迹检测
+  tags: log
+
+file:
+  - extensions:
+      - all
+
+    matchers:
+      - type: word
+        name: phpmyadmin-detect
+        words:
+          - "/phpmyadmin/"
+          - "/phpMyAdmin/"
+          - "/phpmyadmin3"
+          - "/phpmyadmin4"
+          - "/phpmyadmin5"
+          - "/phpmyadmin6"
+          - "/PMA/"
+          - "/phpMyAdmin-"
+        condition: or
+
+      - type: word
+        name: phpmyadmin-misconfiguration
+        words:
+          - "/phpmyadmin/index.php?db=information_schema"
+          - "/phpMyAdmin/index.php?db=information_schema"
+        condition: or
+
+      - type: word
+        name: CVE-2018-12613
+        words:
+          - "/index.php?target=db_sql.php%253f/.."
+        condition: or
+
+      - type: word
+        name: CVE-2009-1151
+        words:
+          - "/scripts/setup.php"
+          - "\"PMA_Config\":1:{s:6:\"source\",s:11:\""
+        condition: and
+
+    extractors:
+      - type: regex
+        regex:
+          - "/phpmyadmin/"
+          - "/phpMyAdmin/"
+          - "/PMA/"
+          - "/phpMyAdmin-"
+          - "/phpmyadmin/index.php?db=information_schema"
+          - "/phpMyAdmin/index.php?db=information_schema"
+          - "/index.php?target=db_sql.php%253f/.."
+          - "/scripts/setup.php"
+          - "\"PMA_Config\":1:{s:6:\"source\",s:11:\""
