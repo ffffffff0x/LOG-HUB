@@ -1,0 +1,133 @@
+id: oob
+
+info:
+  name: oob
+  author: ffffffff0x
+  severity: info
+  description: oob 检测
+  tags: log
+
+file:
+  - extensions:
+      - all
+
+    matchers:
+      - type: word
+        name: dnslog.cn
+        words:
+          - "dnslog.cn"
+
+      - type: word
+        name: oast.pro
+        words:
+          - "oast.pro"
+
+      - type: word
+        name: interactsh.com
+        words:
+          - "interactsh.com"
+
+      - type: word
+        name: interact.sh
+        words:
+          - "interact.sh"
+
+      - type: word
+        name: oast.me
+        words:
+          - "oast.me"
+
+      - type: word
+        name: oast.live
+        words:
+          - "oast.live"
+
+      - type: word
+        name: oast.site
+        words:
+          - "oast.site"
+
+      - type: word
+        name: oast.online
+        words:
+          - "oast.online"
+
+      - type: word
+        name: oast.fun
+        words:
+          - "oast.fun"
+
+      - type: word
+        name: burpcollaborator.net
+        words:
+          - "burpcollaborator.net"
+
+      - type: word
+        name: oastify.com
+        words:
+          - "oastify.com"
+
+      - type: word
+        name: canarytokens.com
+        words:
+          - "canarytokens.com"
+
+      - type: word
+        name: requestbin.net
+        words:
+          - "requestbin.net"
+
+      - type: word
+        name: nip.io
+        words:
+          - "nip.io"
+
+      - type: word
+        name: xip.io
+        words:
+          - "xip.io"
+
+      - type: word
+        name: sslip.io
+        words:
+          - "sslip.io"
+
+      - type: word
+        name: requestbin.com
+        words:
+          - "requestbin.com"
+
+      - type: word
+        name: webhook.site
+        words:
+          - "webhook.site"
+
+      - type: word
+        name: hookbin.com
+        words:
+          - "hookbin.com"
+
+      - type: word
+        name: ngrok.io
+        words:
+          - "ngrok.io"
+
+      - type: word
+        name: gobygo.net
+        words:
+          - "gobygo.net"
+
+      - type: word
+        name: tu4.org
+        words:
+          - "tu4.org"
+
+      - type: word
+        name: eyes.sh
+        words:
+          - "eyes.sh"
+
+      - type: word
+        name: ceye.io
+        words:
+          - "ceye.io"

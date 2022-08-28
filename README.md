@@ -23,7 +23,7 @@ tar -zcvf /tmp/target_log.tar.gz /var/log/nginx/
 mkdir -p /tmp/target_log
 tar -zxvf target_log.tar.gz -C /tmp/target_log
 
-nuclei -t /main -target /tmp/target_log -no-interactsh -no-update-templates -nc
+nuclei -t /main -target /tmp/target_log -ni -duc -nc
 ```
 
 ---
